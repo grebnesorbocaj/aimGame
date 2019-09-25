@@ -65,7 +65,7 @@ var mouse = {
   y: undefined
 }
 
-window.addEventListener('touch', function(e){
+window.addEventListener('click', function(e){
   mouse.x = e.x;
   mouse.y = e.y;
 })
