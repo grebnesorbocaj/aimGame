@@ -65,7 +65,7 @@ var mouse = {
   y: undefined
 }
 
-window.addEventListener('click', function(e){
+window.addEventListener('touchstart', function(e){
   mouse.x = e.x;
   mouse.y = e.y;
 })
@@ -118,6 +118,6 @@ function loadAgainOr(){
 }
 
 let replay = document.getElementById('replay')
-replay.addEventListener('click', function(e){
+replay.addEventListener('touchstart', function(e){
   location.reload();
 })
