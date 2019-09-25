@@ -3,7 +3,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var c = canvas.getContext('2d');
 
-var difficulty = 21;
+var difficulty = 15;
 var numTargets = 100;
 
 function Circle(x, y, radius, radChange){
