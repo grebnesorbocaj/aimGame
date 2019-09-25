@@ -86,7 +86,7 @@ function animate() {
       }else{
         if(Math.floor(Math.random() * 15) == 0){
           let radius = 25;
-          let radChange = 0.3;
+          let radChange = 0.5;
           let x = Math.random() * (innerWidth - radius * 2) + radius;
           let y = Math.random() * (innerHeight - radius * 2) + radius;
           circleArray.push(new Circle(x,y,radius,radChange));
