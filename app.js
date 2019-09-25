@@ -65,7 +65,7 @@ var mouse = {
   y: undefined
 }
 
-window.addEventListener('touchstart', function(e){
+window.addEventListener('touch', function(e){
   mouse.x = e.x;
   mouse.y = e.y;
 })
