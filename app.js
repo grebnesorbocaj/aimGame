@@ -68,11 +68,7 @@ var mouse = {
   clicked: false
 }
 
-window.addEventListener('click', function(e){
-  mouse.x = e.x;
-  mouse.y = e.y;
-  mouse.clicked = true;
-})
+
 
 
 
@@ -80,6 +76,11 @@ window.addEventListener('click', function(e){
 function animate() {
   requestAnimationFrame(animate); //requests to repeat animate function
   c.clearRect(0,0,innerWidth,innerHeight); // clear frame so that new frame can be drawn
+  window.addEventListener('click', function(e){
+    mouse.x = e.x;
+    mouse.y = e.y;
+    mouse.clicked = true;
+  })
   if((pointCount + missedCount) == numTargets){
     loadAgainOr()
     cancelAnimationFrame(animate)
