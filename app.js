@@ -120,6 +120,6 @@ function loadAgainOr(){
 }
 
 let replay = document.getElementById('replay')
-replay.addEventListener('touchstart', function(e){
+replay.addEventListener('click', function(e){
   location.reload();
 })
