@@ -99,7 +99,7 @@ function animate() {
     for(let jol = 0; jol < circleArray.length; jol++){
       circleArray[jol].update()
     }
-    clickAccuracy = pointCount / (pointCount - clickCount + missedCount) * 100 || 0;
+    clickAccuracy = pointCount / (clickCount + missedCount) * 100 || 0;
   }
   if(mouse.x !== undefined){
     clickCount += 1;
