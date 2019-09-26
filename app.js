@@ -65,7 +65,7 @@ var frameCount = 0;
 var mouse = {
   x: undefined,
   y: undefined,
-  clicked: false;
+  clicked: false
 }
 
 window.addEventListener('click', function(e){
