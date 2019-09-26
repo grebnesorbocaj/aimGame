@@ -64,12 +64,14 @@ var frameCount = 0;
 
 var mouse = {
   x: undefined,
-  y: undefined
+  y: undefined,
+  clicked: false;
 }
 
 window.addEventListener('click', function(e){
   mouse.x = e.x;
   mouse.y = e.y;
+  mouse.clicked = true;
 })
 
 
@@ -101,8 +103,9 @@ function animate() {
     }
     clickAccuracy = pointCount / (pointCount + clickCount + missedCount) * 100 || 0;
   }
-  if(mouse.x !== undefined){
+  if(mouse.clicked == true){
     clickCount += 1;
+    mouse.clicked = false;
   }
   mouse.x = undefined;
   mouse.y = undefined;
