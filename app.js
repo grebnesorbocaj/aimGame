@@ -108,6 +108,7 @@ function animate() {
     clickCount += 1;
     mouse.clicked = false;
   }
+  console.log(pointClick, clickCount, missedCount)
   mouse.x = undefined;
   mouse.y = undefined;
 }
