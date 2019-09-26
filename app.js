@@ -121,7 +121,7 @@ function loadAgainOr(){
   document.getElementById('accStat').innerHTML = `Accuracy: ${clickAccuracy.toFixed(2)}%`
   document.getElementById('cliStat').innerHTML = `Clicked Targets: ${pointCount}`
   document.getElementById('misStat').innerHTML = `Missed Targets: ${missedCount}`
-  document.getElementById('wasteStat').innerHTML = `Offtarget Clicks: ${clickCount}`
+  document.getElementById('wasteStat').innerHTML = `Offtarget Clicks: ${clickCount-pointClick}`
 }
 
 let replay = document.getElementById('replay')
