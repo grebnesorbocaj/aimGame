@@ -33,6 +33,8 @@ function Circle(x, y, radius, radChange){
         this.clicked = true;
         this.ignore = true;
         pointCount += 1;
+        mouse.x = undefined;
+        mouse.y = undefined;
       }
       if(this.radius > 60){
         this.radChange = -this.radChange;
