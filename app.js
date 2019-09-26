@@ -108,7 +108,7 @@ function animate() {
     clickCount += 1;
     mouse.clicked = false;
   }
-  console.log(pointClick, clickCount, missedCount)
+  console.log(pointCount, clickCount, missedCount)
   mouse.x = undefined;
   mouse.y = undefined;
 }
@@ -121,7 +121,7 @@ function loadAgainOr(){
   document.getElementById('accStat').innerHTML = `Accuracy: ${clickAccuracy.toFixed(2)}%`
   document.getElementById('cliStat').innerHTML = `Clicked Targets: ${pointCount}`
   document.getElementById('misStat').innerHTML = `Missed Targets: ${missedCount}`
-  document.getElementById('wasteStat').innerHTML = `Offtarget Clicks: ${clickCount-pointClick}`
+  document.getElementById('wasteStat').innerHTML = `Offtarget Clicks: ${clickCount-pointCount}`
 }
 
 let replay = document.getElementById('replay')
