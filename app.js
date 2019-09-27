@@ -97,6 +97,10 @@ function animate() {
     loadAgainOr()
     cancelAnimationFrame(animate)
   }else{
+    if(mouse.clicked == true){
+      clickCount += 1;
+      mouse.clicked = false;
+    }
     if(circleArray.length < numTargets){
       if(frameCount < difficulty){
         frameCount += 1;
@@ -116,10 +120,6 @@ function animate() {
     clickAccuracy = pointCount / (pointCount + clickCount + missedCount) * 100 || 0;
     scoreBoard.innerHTML = `${pointCount} points from ${clickCount} clicks. Missed ${missedCount} circles, ${numLives-missedCount} lives left.`
   }
-  if(mouse.clicked == true){
-    clickCount += 1;
-    mouse.clicked = false;
-  }
   console.log(pointCount, clickCount, missedCount)
   mouse.x = undefined;
   mouse.y = undefined;
@@ -128,12 +128,13 @@ function animate() {
 animate()
 
 function loadAgainOr(){
+  let num = clickCount
   document.getElementById('cover').style.display = 'block';
   document.getElementById('modal').style.display = 'block';
   document.getElementById('accStat').innerHTML = `Accuracy: ${clickAccuracy.toFixed(2)}%`
   document.getElementById('cliStat').innerHTML = `Clicked Targets: ${pointCount}`
   document.getElementById('misStat').innerHTML = `Missed Targets: ${missedCount}`
-  document.getElementById('wasteStat').innerHTML = `Offtarget Clicks: ${clickCount-pointCount}`
+  document.getElementById('wasteStat').innerHTML = `Offtarget Clicks: ${num-pointCount}`
 }
 
 let replay = document.getElementById('replay')

@@ -16,6 +16,7 @@
   left: 25%;
   width: 50%;
   background-color: white;
+  font-family: 'Teko', sans-serif;
 }
 #redCover {
   display: none;
@@ -26,4 +27,12 @@
   background: rgba(249,5,5,0.5);
   width: 100%;
   height: 100%;
+}
+#scoreboard {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    pointer-events: none;
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
 }
