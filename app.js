@@ -117,7 +117,7 @@ function animate() {
     for(let jol = 0; jol < circleArray.length; jol++){
       circleArray[jol].update()
     }
-    clickAccuracy = pointCount / (pointCount + clickCount + missedCount) * 100 || 0;
+    clickAccuracy = pointCount / (clickCount + missedCount) * 100 || 0;
     scoreBoard.innerHTML = `${pointCount} points from ${clickCount} clicks. Missed ${missedCount} circles, ${numLives-missedCount} lives left.`
   }
   console.log(pointCount, clickCount, missedCount)
