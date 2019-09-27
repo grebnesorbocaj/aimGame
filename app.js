@@ -11,7 +11,7 @@ var numLives = 5;
 
 if(window.innerWidth < 800){
   var maxRadius = 60;
-  var radChange = 0.9;
+  var radChange = 0.75;
 }else {
   var maxRadius = 75;
   var radChange = 0.4;
