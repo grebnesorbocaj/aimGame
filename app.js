@@ -56,7 +56,7 @@ function Circle(x, y, radius, radChange){
         this.ignore = true;
         if(this.clicked == false) {
           document.getElementById('redCover').style.display = 'block'
-          setTimer(function(){
+          setTimeout(function(){
             document.getElementById('redCover').style.display = 'none'
           }, 70)
           missedCount += 1;
